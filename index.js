@@ -32,15 +32,15 @@ app.use("/order", orderRoute);
 app.use("/card", cardRoute);
 app.use("/payments", stripeRoute);
 
-app.use(
-  express.static(path.join(__dirname, "/build"))
-);
+// app.use(
+//   express.static(path.join(__dirname, "/build"))
+// );
 
-app.get("*", (req, res) => {
-  res.sendFile(
-    path.join(__dirname, "/build", "index.html")
-  );
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(
+//     path.join(__dirname, "/build", "index.html")
+//   );
+// });
 
 app.listen(PORT, () => {
   console.log(`Server is started http://localhost:${PORT}`);
