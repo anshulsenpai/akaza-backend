@@ -42,6 +42,10 @@ app.use("/payments", stripeRoute);
 //   );
 // });
 
+app.get('/', (req, res) => {
+  res.json({message: "working"})
+})
+
 app.listen(PORT, () => {
   console.log(`Server is started http://localhost:${PORT}`);
 });
